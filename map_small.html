@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  
+ <script
+src="http://maps.googleapis.com/maps/api/js">
+</script>
+
+<script>
+var myCenter=new google.maps.LatLng(38.345406,-81.640635);
+function initialize()
+{
+var mapProp = {
+  center:myCenter,
+  zoom:12,
+  mapTypeId:google.maps.MapTypeId.HYBRID,
+  panControl: true,
+  zoomControl: true,
+  mapTypeControl: true,
+  scaleControl: true,
+  streetViewControl: true,
+  overviewMapControl: true
+  };
+
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+//  start of individual
+var Wallace=new google.maps.Marker({
+  position: {
+    lat:38.314832,
+    lng:-81.635713,
+  },
+   icon: 'images/mapIcons/forest.png'
+  });
+
+Wallace.setMap(map);
+
+var infowindow = new google.maps.InfoWindow({
+  content:'<strong>Wallace Hartman Nature Preserve</strong><br>Charleston, WV 25314<br><a href="http://www.wvlandtrust.org/projects-wallace_hartman_nature_preserve.html">Click for site</a>'
+  });
+google.maps.event.addListener(Wallace, 'click', function() {
+  infowindow.open(map,Wallace);
+  });
+
+// end of individual
+var chilton =new google.maps.Marker({
+  position: {
+    lat:38.332221,
+    lng:-81.647110,
+  },
+  icon: 'images/mapIcons/forest.png'
+  });
+
+chilton.setMap(map);
+
+var infowindow2 = new google.maps.InfoWindow({
+  content:'<strong>Chilton Reserve</strong><br>1203 Loudon Heights Road<br>Charleston, WV 25314'
+  });
+
+google.maps.event.addListener(chilton, 'click', function() {
+  infowindow2.open(map,chilton);
+  });
+var sunrise =new google.maps.Marker({
+  position: {
+    lat:38.345406,
+    lng:-81.640635,
+  },
+  icon: 'images/mapIcons/sunsetland.png'
+  });
+
+sunrise.setMap(map);
+
+var infowindow3 = new google.maps.InfoWindow({
+  content:'<strong>Sunrise Carriage Trail</strong><br>Charleston, WV 25314<br><a href="http://www.carriagetrail.org/">Click for site</a>'
+  });
+
+google.maps.event.addListener(sunrise, 'click', function() {
+  infowindow3.open(map,sunrise);
+  });
+
+var cato =new google.maps.Marker({
+  position: {
+    lat:38.376817,
+    lng:-81.635884,
+  },
+  icon: 'images/mapIcons/park.png'
+  });
+
+cato.setMap(map);
+
+var infowindow4 = new google.maps.InfoWindow({
+  content:'<strong>Cato Park</strong><br>200 Baker Lane<br>Charleston, WV 25314<br><a href="http://www.cityofcharleston.org/">Click for site</a>'
+  });
+
+google.maps.event.addListener(cato, 'click', function() {
+  infowindow4.open(map,cato);
+  });
+
+var danner =new google.maps.Marker({
+  position: {
+    lat:38.353015,
+    lng:-81.659542,
+  },
+  icon: 'images/mapIcons/park.png'
+  });
+
+danner.setMap(map);
+
+var infowindow5 = new google.maps.InfoWindow({
+  content:'<strong>Danner Meadow Park</strong><br>Longwood Road<br>Charleston, WV 25314<br><a href="http://www.cityofcharleston.org/">Click for site</a>'
+  });
+
+google.maps.event.addListener(danner, 'click', function() {
+  infowindow5.open(map,danner);
+  });
+
+var fort =new google.maps.Marker({
+  position: {
+    lat:38.351867, 
+    lng:-81.654725,
+  },
+  icon: 'images/mapIcons/fort.png'
+  });
+
+fort.setMap(map);
+
+var infowindow6 = new google.maps.InfoWindow({
+  content:'<strong>Fort Scammon</strong><br>Fort Circle Drive<br>Charleston, WV 25314'
+  });
+
+google.maps.event.addListener(fort, 'click', function() {
+  infowindow6.open(map,fort);
+  });
+
+var spring =new google.maps.Marker({
+  position: {
+    lat:38.351161, 
+    lng:-81.613815,
+  },
+  icon: 'images/mapIcons/cemetery.png'
+  });
+
+spring.setMap(map);
+
+var infowindow6 = new google.maps.InfoWindow({
+  content:'<strong>Spring Hill Cemetery</strong><br>1555 Farnsworth Drive<br>Charleston, WV 25311<br><a href="http://www.friendsofspringhillcemetery.org/">Click for Site</a>'
+  });
+
+google.maps.event.addListener(spring, 'click', function() {
+  infowindow6.open(map,spring);
+  });
+
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+//$('#myModal').on('shown.bs.modal', function() {
+  // resizeMap();
+//});
+
+function resizeMap() {
+   if(typeof map =="undefined") return;
+   var center = map.getCenter();
+   google.maps.event.trigger(map, "resize");
+   map.setCenter(center); 
+};
+
+</script>
+</head>
+
+<body>
+<div class="google-maps" id="googleMap" style="width:100%;height:300px;"></div>
+</body>
+</html>
+
+

@@ -1,0 +1,144 @@
+/*-----------------FONTS----------------------*/
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,600,800);
+
+/************ NAVBAR ***********************/
+
+.navbar-default {
+    top:65px;
+    background-color:rgba(255,255,255,0);
+
+}
+
+.navbar-brand-centered {
+    position: absolute;
+    left: 50%;
+    display: block;
+    width: 160px;
+    text-align: center;
+    background-color: transparent;
+}
+.navbar>.container .navbar-brand-centered, 
+.navbar>.container-fluid .navbar-brand-centered {
+    margin-left: -80px;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #777;
+    font-family:"Raleway";
+    font-weight:600;
+    font-size: 1.3em;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    color: #777;
+    font-family:"Raleway";
+    font-weight:600;
+    font-size: 1.3em;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    background-color: rgba(255,255,255,0.7);
+}
+
+.dropdown-menu>li>a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-family:"Raleway";
+    font-weight: 400;
+    line-height: 1.42857143;
+    color: #333;
+    white-space: nowrap;
+}
+
+.logo {
+    background: url('../images/cltLogo_no_text.png');
+    background-size:cover;
+    background-width:100%;
+
+}
+
+.logo-size {
+    width: 99px;
+    height: 120px;
+    margin: 0 auto;
+    margin-top: -75px;
+}
+
+.logo-size img {
+    vertical-align: top;
+}
+
+@media(max-width: 767px) {
+    .navbar-brand-centered {
+        left: 0%;
+    }
+
+    .navbar>.container .navbar-brand-centered, 
+.navbar>.container-fluid .navbar-brand-centered {
+    margin-left: 0px;
+}
+}
+
+
+/*************Slider ****************/
+
+#slide1,
+#slide2,
+#slide3 {
+    background-size: cover;
+    background-attachment: no-repeat fixed;
+    background-position: 50% 50%;
+    border-bottom: 1px solid white;
+}
+
+#slide1{
+    background-image: url(../images/full-slider/intro-bg.jpg);
+    padding: 1% 0 0 0;
+}
+#slide2{
+    background-image: url(../images/full-slider/intro-bg2.jpg);
+    padding: 1% 0 0 0;
+}
+#slide3{
+    background-image: url(../images/full-slider/intro-bg3.jpg);
+    padding: 1% 0 0 0;
+}
+
+.slide h1 {
+    color: white;
+    font-size: 3.1em;
+    font-weight: 800;
+    font-family:"Raleway";
+    text-shadow: 2px 2px 2px black;
+}
+
+.slide h3 {
+    color: white;
+    font-size: 2.1em;
+    font-weight: 800;
+    font-family:"Raleway";
+    text-shadow: 2px 2px 2px black;
+    text-transform: uppercase;
+}
+
+
+
+.slide-logo {
+    height: 200px;
+    width: 217px;
+}
+
+.section {
+    text-align: center;
+}
+
+@media(max-width:767px) {
+    .slide-logo {
+        height: 100px;
+        width: 108px;
+    }
+}
