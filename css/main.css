@@ -22,6 +22,8 @@ p {
 
 }
 
+
+
 /************ NAVBAR ***********************/
 
 .navbar-default {
@@ -95,11 +97,8 @@ p {
     height: 200px;
     margin: 0 auto;
     margin-top: -20px;
-    background-image: url(../images/cltLogo-noGreen.png);
-}
-
-.logo-size.logo-size2 {
-    background-color:red;
+    /*background-image: url(../images/cltLogo-noGreen.png);*/
+     background-image: url(../images/cltLogoFinal.png);
 }
 
 .logo-size img {
@@ -132,7 +131,7 @@ p {
     .logo-size {
         width:80px;
         height:80px;
-        background-image: url(../images/logo-sm.png);
+        background-image: url(../images/logo-sm2.png);
         margin-top: -15px;
     }
 
@@ -213,6 +212,12 @@ p {
         height: 100px;
         width: 108px;
     }
+
+    .slide .arrowScroll {
+        display: none;
+    }
+
+
 }
 
 /*********************Home Page************************/
@@ -244,6 +249,14 @@ p {
     padding:15px 15px 15px 0px;
 }
 
+@media(max-width:991px) {
+    .middleBack img,
+    .frontBlocks img,
+    .circlePad img {
+        margin: 0 auto;
+
+    }
+}
 
 /**************** Map********************/
 
@@ -331,6 +344,14 @@ p {
         margin-top: -20px;
     }
 }
+
+@media(max-width:525px) {
+    .squarePad {
+        padding-top:10px;
+        margin-top: 10px;
+    }
+}
+
 .pageMain {
     margin-top: 20px;
     padding-left:15px;
